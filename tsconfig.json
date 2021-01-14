@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    // Optional, but makes it so you don’t have to use relative
+    // paths for imports. Add as many folders as you need.
+    "paths": {
+      "@images/*": ["./src/assets/images/*"]
+    },
+    // Target latest version of ECMAScript.
+    "target": "ESNext",
+    // Search under node_modules for non-relative imports.
+    "moduleResolution": "node",
+    "jsx": "react",
+    // Don't emit; allow Babel to transform files.
+    "noEmit": true,
+    // Import non-ES modules as default imports.
+    "esModuleInterop": true,
+    "plugins": [
+      {
+          "transform": "typescript-plugin-styled-components",
+          "type": "config",
+
+          // other typescript-plugin-styled-components options can be added here
+          "minify": true,
+          "ssr": false
+      }
+  ]
+  },
+  "include": ["./src/**/*", "**/*.spec.ts", "**/*.test.ts"]
+}

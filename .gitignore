@@ -1,0 +1,8 @@
+dist/
+build/
+node_modules/
+__snapshots__/
+package-lock.json
+*.log
+stats.json
+.eslintcache
